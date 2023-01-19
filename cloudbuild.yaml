@@ -7,6 +7,6 @@ steps:
    args: ['push', 'gcr.io/nuxtapp-375210/nuxtapp']
  # deploy container to cloud run
  - name: 'gcr.io/cloud-builders/gcloud'
-   args: ['run', 'deploy','nuxtapp', '--image', 'gcr.io/nuxtapp-375210/nuxtapp', '--region', 'uk-1', '--platform', 'managed', '--allow-unauthenticated']
+   args: ['run', 'deploy','nuxtapp', '--image', 'gcr.io/nuxtapp-375210/nuxtapp', '--region', 'europe-west2', '--platform', 'managed', '--allow-unauthenticated']
 images:
  - 'gcr.io/nuxtapp-375210/nuxtapp'
