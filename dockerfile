@@ -1,5 +1,5 @@
 #base node image
-FROM node:10
+FROM node:18
 
 WORKDIR /usr/src/app
 
