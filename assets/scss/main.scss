@@ -1,7 +1,9 @@
 $bodyFont: Helvetica, sans-serif;
+$bgColor: #859da6;
 
 body {
     font-family:$bodyFont;
+    background-color: $bgColor;
 }
 
 * {
