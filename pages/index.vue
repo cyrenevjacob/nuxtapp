@@ -1,10 +1,14 @@
 <template>
   <div>
-    <ul v-for="mountain in mountains" :key="mountain.id">
+    <Header/>
+    <div style="overflow:auto;">
+      <ul v-for="mountain in mountains" :key="mountain.id">
       <NuxtLink :to="`${mountain.continent.toLowerCase()}/${mountain.slug}`">
         <li>{{ mountain.title }}</li>
       </NuxtLink>
-    </ul>
+      </ul>
+    </div>
+    <Footer />
   </div>
 </template>
 <script>
