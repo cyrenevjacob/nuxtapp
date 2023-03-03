@@ -9,7 +9,7 @@ steps:
  - name: 'gcr.io/cloud-builders/gcloud'
    args: ['run', 'deploy','${_SERVICE_NAME}', '--platform', 'managed', '--region', '${_REGION}', '--image', 'gcr.io/${PROJECT_ID}/${_SERVICE_NAME}:${_PR_NUMBER}-${SHORT_SHA}','--tag', 'pr-${_PR_NUMBER}']
  # Link revisions on pull request
- - name: 'gcr.io/${PROJECT_ID}/deployment-previews'
+ - name: 'gcr.io/${PROJECT_ID}/deployment-previews:${_PR_NUMBER}-${SHORT_SHA}'
    secretEnv: ["GITHUB_TOKEN"]
    args: ['set', '--project-id', '${PROJECT_ID}', '--region', '${_REGION}','--service', '${_SERVICE_NAME}', '--pull-request', '${_PR_NUMBER}', '--repo-name', '${_GITHUB_REPO}', '--commit-sha', '${SHORT_SHA}']
 substitutions:
