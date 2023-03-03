@@ -17,7 +17,7 @@ substitutions:
   _REGION: europe-west2
   _GITHUB_REPO: $(pull_request.head.repo.full_name)
 options:
-  dynamicSusbstitutions: true
+  dynamicSubstitutions: true
 availableSecrets:
   secretManager:
     - versionName: projects/$PROJECT_ID/secrets/github_token/versions/latest
