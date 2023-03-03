@@ -15,7 +15,7 @@ steps:
 substitutions:
   _SERVICE_NAME: previewService
   _REGION: europe-west2
-  _GITHUB_REPO: ${{github.event.pull_request.head.repo.full_name}}
+  _GITHUB_REPO: ${github.event.pull_request.head.repo.full_name}
 options:
   dynamicSubstitutions: true
 availableSecrets:
