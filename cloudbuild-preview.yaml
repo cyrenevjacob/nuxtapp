@@ -15,7 +15,7 @@ steps:
 substitutions:
   _SERVICE_NAME: previewservice
   _REGION: europe-west2
-  _GITHUB_REPO: $REPO_NAME
+  _GITHUB_REPO: 'cyrenevjacob/$REPO_NAME'
 options:
   dynamicSubstitutions: true
 availableSecrets:
