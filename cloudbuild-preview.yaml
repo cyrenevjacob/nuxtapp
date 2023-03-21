@@ -15,7 +15,7 @@ steps:
 substitutions:
   _SERVICE_NAME: previewservice
   _REGION: europe-west2
-  _GITH.UB_REPO: cyrenevjacob/${REPO_NAME}
+  _GITHUB_REPO: cyrenevjacob/${REPO_NAME}
 options:
 
 -  dynamicSubstitutions: true
@@ -23,3 +23,5 @@ availableSecrets:
   secretManager:
     - versionName: projects/$PROJECT_ID/secrets/github_token/versions/latest
       env: 'GITHUB_TOKEN'
+images: 
+ - 'gcr.io/${PROJECT_ID}/nuxtapp'
